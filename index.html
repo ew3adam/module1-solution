@@ -1,0 +1,49 @@
+<!doctype html>
+<html ng-app="LunchCheck">
+  <head>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+  </head>
+
+<body>
+<div class="container"
+     ng-controller="LunchCheckController">
+     <h1>Lunch Checker</h1>
+     <div>
+         <div class="form-group">
+          <p>Enter Items:</p>
+             <input id="lunch-menu" 
+                    type="text" 
+                    placeholder="Please enter data first"
+                    class="form-control"
+                    ng-model="itemArray">
+         </div>
+        <p style="color: white;">{{itemArray}} Message: {{message}}</p>
+        
+        
+        <div class="form-group">
+        <!--https://docs.angularjs.org/api/ng/directive/ngClick
+        -->
+                <div class="form-group message" style="color: red;">
+           {{message}}
+        </div>   
+        <button class="btn btn-default" 
+            ng-click="checkInput()">Check If Too Much</button>
+        </div>
+     
+        
+
+
+
+
+
+    </div>
+</div>
+</body>
+</html>
